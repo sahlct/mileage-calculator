@@ -10,8 +10,8 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <div style="height: 100vh;" class="container col-12 d-flex justify-content-center align-items-center ">
+<body >
+    <div style="position: fixed;inset: 0;" class="container col-12 d-flex justify-content-center align-items-center ">
         <div style="border-radius: 20px;"
             class="main123  d-flex justify-content-center align-items-center flex-column gap-4">
             <h1>Mileage Calculator</h1>
@@ -45,7 +45,7 @@
 
     <script>
 
-        let first, second;
+
         function work() {
             var km = document.getElementById("kmdriven").value;
             var kilometere = parseFloat(km)
@@ -65,10 +65,10 @@
 
             function calculating() {
 
-
+                let first, second;
                 first = fund / price
                 second = kilometere / first
-                document.getElementById("display").innerText = "Your Vehicle Mileage is :  " + second.toFixed(2);
+                document.getElementById("display").innerText = "Your Vehicle Mileage is :  " + second.toFixed(2) + "km/l";
             }
 
 
